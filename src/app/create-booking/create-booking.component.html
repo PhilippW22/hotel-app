@@ -1,0 +1,59 @@
+<div class="card bg-dark text-white">
+
+    <div class="card-header">
+        <h5>Create a Booking</h5>
+    </div>
+
+    <form [formGroup]="bookingForm" (ngSubmit)="save()">
+        <div class="card-body">
+            <div class="row mb-2">
+                <div class="col">
+            <!-- ID -->
+                    <label class="form-label">Id</label>
+                    <input formControlName="id" class="form-control" type="number">
+                </div>
+                <div class="col">
+            <!-- ROOMNUMBER -->
+                    <label class="form-label">Roomnumber</label>
+                    <input  formControlName="roomNumber" class="form-control" type="number">
+                </div>
+            </div>
+        
+            <div class="row mb-2">
+                <div class="col-4">
+            <!-- NAME -->
+                    <label class="form-label">Guest Name</label>      
+                    <input  formControlName="name" class="form-control" type="text">
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col-4">
+                    <div *ngIf="bookingForm.get('name')?.hasError('minlength')" class="text-danger">
+                        Der Name ist zu kurz.
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row mb-2">
+                <div class="col">
+                <!-- STARTDATE -->
+                    <label class="form-label">Start Date</label>
+                    <input  formControlName="startDate" [value]="booking.startDate | date: 'yyy-MM-dd'" (input)="dateChanged($event, true)" class="form-control" type="date">
+                </div>
+                <div class="col">
+                <!-- ENDDATE -->
+                    <label class="form-label">End Date</label>
+                    <input  formControlName="endDate" [value]="booking.endDate | date: 'yyy-MM-dd'" (input)="dateChanged($event, false)" class="form-control" type="date">
+        
+                </div>
+            </div>
+        </div> 
+
+        <div class="card-footer">
+            <button [disabled]="bookingForm.invalid" type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+
+
