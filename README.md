@@ -2,7 +2,7 @@
 
 Dieses Projekt entstand begleitend zu einem Angular-Kurs und diente als Lern- und Übungsprojekt, um Angular und TypeScript praxisnah kennenzulernen.
 
-## Projektkontext
+🔗 **Live Demo:** https://philippw22.github.io/hotel-app/## Projektkontext
 
 - Lernprojekt (nicht produktiv eingesetzt)
 - Fokus auf Frontend-Architektur und Angular-Grundlagen
@@ -24,9 +24,5 @@ Dieses Projekt entstand begleitend zu einem Angular-Kurs und diente als Lern- un
 - Template- & Reactive Forms
 - Lifecycle Hooks
 - Responsives Layout
-
-## Demo
-
-🔗 **Live Demo:** https://philippw22.github.io/hotel-app/hotel-app/
 
 Hinweis: Fokus lag auf dem Lernprozess und dem Verständnis von Angular, nicht auf einem produktionsreifen Design.
